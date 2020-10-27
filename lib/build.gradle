@@ -1,0 +1,13 @@
+plugins {
+    id 'packstudio.java-library-conventions'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+group 'com.ryanbester'
+version '1.0-SNAPSHOT'
+
+shadowJar {
+    archiveBaseName.set('PackStudioAPI')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}

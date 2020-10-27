@@ -1,0 +1,30 @@
+plugins {
+    id 'packstudio.java-application-conventions'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+group 'com.ryanbester'
+version '1.0-SNAPSHOT'
+
+shadowJar {
+    mainClassName = 'com.ryanbester.packstudio.cli.Main'
+    archiveBaseName.set('PackStudioCLI')
+    archiveClassifier.set('')
+    archiveVersion.set('')
+}
+
+dependencies {
+    implementation project(':lib')
+}
+
+application {
+    mainClass = 'com.ryanbester.packstudio.cli.Main'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.ryanbester.packstudio.cli.Main'
+        )
+    }
+}

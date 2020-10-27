@@ -1,0 +1,4 @@
+plugins {
+    id 'packstudio.java-common-conventions'
+    id 'application'
+}
