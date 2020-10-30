@@ -1,11 +1,17 @@
 package com.ryanbester.packstudio.gui.welcomescreen;
 
+import com.ryanbester.packstudio.gui.aboutdialog.AboutDialogController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -16,6 +22,8 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class WelcomeScreenController implements Initializable {
 
@@ -64,8 +72,9 @@ public class WelcomeScreenController implements Initializable {
     }
 
     @FXML private ListView<RecentProject> recentProjects;
-
     @FXML private ImageView imgLogo;
+    @FXML private Hyperlink aboutBtn;
+    @FXML private Hyperlink settingsBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle resources) {
@@ -74,5 +83,9 @@ public class WelcomeScreenController implements Initializable {
         recentProjects.setCellFactory(param -> new RecentProjectCell());
 
         imgLogo.setImage(new Image("/assets/icon256.png"));
+
+        aboutBtn.setOnAction(event -> {
+            AboutDialogController.showAboutDialog();
+        });
     }
 }

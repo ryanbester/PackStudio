@@ -10,7 +10,6 @@ shadowJar {
     mainClassName = 'com.ryanbester.packstudio.Main'
     archiveBaseName.set('PackStudio')
     archiveClassifier.set('')
-    archiveVersion.set('')
 }
 
 dependencies {

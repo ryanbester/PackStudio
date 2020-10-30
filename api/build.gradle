@@ -7,9 +7,10 @@ group 'com.ryanbester'
 version '1.0-SNAPSHOT'
 
 shadowJar {
-    archiveBaseName.set('PackStudioLib')
+    archiveBaseName.set('PackStudioAPI')
     archiveClassifier.set('')
 }
 
 dependencies {
+    implementation project(':lib')
 }
