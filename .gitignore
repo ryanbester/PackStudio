@@ -103,3 +103,4 @@ local.properties
 buildSrc/.gradle
 buildSrc/build
 /run/
+/app/build/

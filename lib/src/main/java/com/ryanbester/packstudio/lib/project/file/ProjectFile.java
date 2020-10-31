@@ -14,6 +14,15 @@ public class ProjectFile {
 
     @Expose private ProjectFilePaths paths;
 
+    public ProjectFile() {
+
+    }
+
+    public ProjectFile(String name, int version) {
+        this.name = name;
+        this.version = version;
+    }
+
     public String getName() {
         return name;
     }

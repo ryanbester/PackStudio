@@ -38,27 +38,6 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) {
-        try {
-            Project project = new Project(new File("test.psp"));
-
-            ProjectFile projectFile = new ProjectFile();
-            projectFile.setName("Test");
-            projectFile.setVersion(16);
-
-            ProjectFilePaths paths = new ProjectFilePaths();
-            paths.setTextures(new ArrayList<>());
-            paths.getTextures().add(new ProjectFilePath("grass_block", "blocks/grass"));
-            paths.getTextures().add(new ProjectFilePath("beacon", "blocks/beacon"));
-
-            projectFile.setPaths(paths);
-
-            project.setProjectFile(projectFile);
-            project.saveProject();
-            System.out.println("Saved project file");
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
         System.setProperty("apple.laf.useScreenMenuBar", "true");
         System.setProperty("com.apple.mrj.application.apple.menu.about.name", "PackStudio");
         System.setProperty("javafx.preloader", PackStudioPreloader.class.getCanonicalName());
