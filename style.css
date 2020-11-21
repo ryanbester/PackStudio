@@ -1,0 +1,9 @@
+* {
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(#A6D7F2, #4D6991);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
