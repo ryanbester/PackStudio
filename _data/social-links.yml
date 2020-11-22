@@ -1,0 +1,9 @@
+- name: Twitter
+  icon: twitter.png
+  url: https://twitter.com/PackStudioNews
+- name: GitHub
+  icon: github.png
+  url: https://github.com/ryanbester/PackStudio
+- name: Discord
+  icon: discord.png
+  url: #

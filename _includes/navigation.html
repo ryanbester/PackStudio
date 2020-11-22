@@ -15,3 +15,39 @@
         </tr>
     </table>
 </nav>
+<nav id="mobile-nav">
+    <div id="mobile-nav-header">
+        <table id="mobile-nav-header-table-left">
+            <tr>
+                <td>
+                    <a href="/">
+                        <img src="/assets/images/icon48.png" />
+                    </a>
+                </td>
+                <td>
+                    <a class="main-nav-link{% if page.url == / %} nav-link-active{% endif %}" href="/">PackStudio</a>
+                </td>
+            </tr>
+        </table>
+        <table id="mobile-nav-header-table-right">
+            <tr>
+                <td>
+                    <a class="mobile-nav-link" onclick="toggleMenu()" href="#">Menu</a>
+                </td>
+            </tr>
+        </table>
+        <div style="clear: both;"></div>
+    </div>
+    <div id="mobile-nav-menu">
+        <table id="mobile-nav-table">
+            {% for item in site.data.navigation %}
+            <tr>
+                <td>
+                    <a class="mobile-nav-link{% if page.url == item.url %} nav-link-active{% endif %}"
+                        href="{{ item.link }}">{{ item.name }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</nav>

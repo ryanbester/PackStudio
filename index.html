@@ -2,5 +2,32 @@
 layout: default
 title: PackStudio
 ---
+
+<div id="top-social-row">
+    {% for item in site.data.social-links %}
+    <div class="top-social-row-item">
+        <table class="top-social-row-item-table" cellspacing="0" cellpadding="0">
+            <tr>
+                <td><a href="{{ item.url }}"><img class="top-social-row-item-img" src="/assets/images/{{ item.icon }}" width="96" height="96" /></a></td>
+                <td>
+                    <a class="top-social-row-item-link" href="{{ item.url }}">{{ item.name }}</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    {% endfor %}
+</div>
 <h1>PackStudio</h1>
-<p>Hello World</p>
+<p class="home-summary">A free and open source application for making Minecraft resource packs.</p>
+<div class="home-summary-download-btn-container">
+    <a class="home-summary-download-btn" href="/download">Coming Soon!</a>
+    <div class="home-summary-download-btn-platforms">
+        <span style="background-image: url(/assets/images/linux.svg);"></span>
+        <span style="background-image: url(/assets/images/macos.svg);"></span>
+        <span style="background-image: url(/assets/images/windows.svg);"></span>
+    </div>
+</div>
+<section class="content-box">
+    <h2>Features</h2>
+    <p>Features</p>
+</section>
