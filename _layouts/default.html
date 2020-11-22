@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en-gb">
+
+<head>
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icon180.png">
+    <link rel="apple-touch-startup-image" href="/assets/images/icon192.png">
+    <link rel="icon" href="/assets/images/icon48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="/assets/images/icon192.png" type="image/png" sizes="192x192">
+    <meta name="author" content="Ryan Bester">
+    <meta name="keywords" content="packstudio minecraft pack texture resource">
+    <meta name="description" content="PackStudio is an application for making Minecraft Resource Packs.">
+    <meta name="twitter:image:src" content="/assets/images/card.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PackStudio" />
+    <meta name="twitter:description" content="PackStudio is an application for making Minecraft Resource Packs." />
+    <meta property="og:description" content="PackStudio is an application for making Minecraft Resource Packs.">
+    <meta property="og:title" content="PackStudio">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/images/card.png">
+    <meta property="og:url" content="https://packstudio.ryanbester.com">
+    <meta property="og:site_name" content="PackStudio" />
+    <meta property="og:type" content="object" />
+    <meta name="theme-color" content="#FFF">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="PackStudio">
+    <meta name="application-name" content="PackStudio">
+</head>
+
+<body>
+    {% include navigation.html %}
+    <div id="main-container">
+        {{ content }}
+    </div>
+</body>
+
+</html>

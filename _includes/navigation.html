@@ -1,0 +1,17 @@
+<nav id="main-nav">
+    <table id="main-nav-table">
+        <tr>
+            <td>
+                <a href="/">
+                    <img src="/assets/images/icon48.png" />
+                </a>
+            </td>
+            {% for item in site.data.navigation %}
+            <td>
+                <a class="main-nav-link{% if page.url == item.url %} nav-link-active{% endif %}"
+                    href="{{ item.link }}">{{ item.name }}</a>
+            </td>
+            {% endfor %}
+        </tr>
+    </table>
+</nav>
