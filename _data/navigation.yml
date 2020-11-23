@@ -1,18 +1,12 @@
 - name: PackStudio
   link: /
-  url: /
 - name: Download
   link: /download
-  url: /download.html
 - name: Features
   link: /features
-  url: /features.html
 - name: Docs
   link: /docs
-  url: /docs.html
 - name: FAQ
   link: /faq
-  url: /faq.html
 - name: About
   link: /about
-  url: /about.html

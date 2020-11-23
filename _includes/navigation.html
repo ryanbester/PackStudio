@@ -8,7 +8,7 @@
             </td>
             {% for item in site.data.navigation %}
             <td>
-                <a class="main-nav-link{% if page.url == item.url %} nav-link-active{% endif %}"
+                <a class="main-nav-link{% if page.active == item.link %} nav-link-active{% endif %}"
                     href="{{ item.link }}">{{ item.name }}</a>
             </td>
             {% endfor %}
@@ -25,7 +25,7 @@
                     </a>
                 </td>
                 <td>
-                    <a class="main-nav-link{% if page.url == / %} nav-link-active{% endif %}" href="/">PackStudio</a>
+                    <a class="main-nav-link{% if page.active == / %} nav-link-active{% endif %}" href="/">PackStudio</a>
                 </td>
             </tr>
         </table>
@@ -43,7 +43,7 @@
             {% for item in site.data.navigation %}
             <tr>
                 <td>
-                    <a class="mobile-nav-link{% if page.url == item.url %} nav-link-active{% endif %}"
+                    <a class="mobile-nav-link{% if page.active == item.link %} nav-link-active{% endif %}"
                         href="{{ item.link }}">{{ item.name }}</a>
                 </td>
             </tr>

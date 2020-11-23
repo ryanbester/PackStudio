@@ -1,5 +1,6 @@
 ---
 layout: default
+active: /
 title: PackStudio
 ---
 
@@ -8,9 +9,10 @@ title: PackStudio
     <div class="top-social-row-item">
         <table class="top-social-row-item-table" cellspacing="0" cellpadding="0">
             <tr>
-                <td><a href="{{ item.url }}"><img class="top-social-row-item-img" src="/assets/images/{{ item.icon }}" width="96" height="96" /></a></td>
                 <td>
-                    <a class="top-social-row-item-link" href="{{ item.url }}">{{ item.name }}</a>
+                    <a href="{{ item.url }}" target="_blank">
+                        <span class="social-row-item-image" data-image="/assets/images/{{ item.icon }}"></span>
+                    </a>
                 </td>
             </tr>
         </table>
@@ -27,7 +29,21 @@ title: PackStudio
         <span style="background-image: url(/assets/images/windows.svg);"></span>
     </div>
 </div>
+<h1>Features</h1>
 <section class="content-box">
-    <h2>Features</h2>
-    <p>Features</p>
+    <h2>Porting</h2>
+    <p>Easily port your Minecraft resource packs to many different Minecraft versions, including Java and Bedrock!</p>
 </section>
+<section class="content-box">
+    <h2>Model Editor</h2>
+    <p>Freely create custom Minecraft models with the intuitive Model editor!</p>
+</section>
+<section class="content-box">
+    <h2>Customisable</h2>
+    <p>Use your favourite editing software to edit your textures!</p>
+</section>
+<section class="content-box">
+    <h2>Extensibility</h2>
+    <p>Extend the features of PackStudio with custom plugins!</p>
+</section>
+<h2 class="homepage-link"><a href="/features">See all features &rarr;</a></h2>

@@ -1,5 +1,80 @@
 ---
 layout: default
+active: /docs
 ---
 
 <h1>PackStudio Docs</h1>
+<div id="docs-container">
+    <div id="docs-navigation">
+        <p id="docs-navigation-list-expander" class="docs-expander" onclick="toggleDocsNavigation()"><span id="docs-navigation-list-expander-glyph" class="docs-expander-glyph"></span>Table of Contents</p>
+        <ul id="docs-navigation-list" class="expandable-list">
+            <hr />
+            {% for item in site.data.docs-contents %}
+            {% if item.items %}
+            <li data-path="{{ item.url }}"><span class="expandable-list-expander"><span
+                        class="expandable-list-expander-indicator"></span>{{ item.name }}</span>
+                <ul class="expandable-list">
+                    {% for subitem in item.items %}
+                    {% if subitem.items %}
+                    <li data-path="{{ subitem.url }}"><span class="expandable-list-expander"><span
+                        class="expandable-list-expander-indicator"></span>{{ subitem.name }}</span>
+                        <ul class="expandable-list">
+                            {% for subitem2 in subitem.items %}
+                            {% if subitem2.items %}
+                            <li data-path="{{ subitem2.url }}"><span class="expandable-list-expander"><span
+                                class="expandable-list-expander-indicator"></span>{{ subitem2.name }}</span>
+                                <ul class="expandable-list">
+                                    {% for subitem3 in subitem2.items %}
+                                    {% if subitem3.items %}
+                                    <li data-path="{{ subitem3.url }}"><span class="expandable-list-expander"><span
+                                        class="expandable-list-expander-indicator"></span>{{ subitem3.name }}</span>
+                                        <ul class="expandable-list">
+                                            {% for subitem4 in subitem3.items %}
+                                            <li data-path="{{ subitem4.url }}"><a class="expandable-list-link"
+                                                    href="/docs/{{ item.url }}/{{ subitem.url }}/{{ subitem2.url }}/{{ subitem3.url }}/{{ subitem4.url }}">{{ subitem4.name }}</a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% else %}
+                                    <li data-path="{{ subitem3.url }}"><a class="expandable-list-link"
+                                            href="/docs/{{ item.url }}/{{ subitem.url }}/{{ subitem2.url }}/{{ subitem3.url }}">{{ subitem3.name }}</a>
+                                        {% endif %}
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                {% else %}
+                            <li data-path="{{ subitem2.url }}"><a class="expandable-list-link"
+                                    href="/docs/{{ item.url }}/{{ subitem.url }}/{{ subitem2.url }}">{{ subitem2.name }}</a>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        {% else %}
+                    <li data-path="{{ subitem.url }}"><a class="expandable-list-link" href="/docs/{{ item.url }}/{{ subitem.url }}">{{ subitem.name }}</a>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+            <li data-path="{{ item.url }}"><a class="expandable-list-link" href="/docs/{{ item.url }}">{{ item.name }}</a>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="docs-content">
+        {{ content }}
+    </div>
+    <div id="docs-sidebar">
+        <p id="docs-sidebar-list-expander" class="docs-expander" onclick="toggleDocsSidebar()"><span id="docs-sidebar-list-expander-glyph" class="docs-expander-glyph"></span>On this page</p>
+        <ul id="docs-sidebar-list">
+            <hr />
+            {% for item in page.sidebar_items %}
+            <li><a href="#{{ item.href }}">{{ item.name }}</a></li>
+            {% endfor %}
+        </ul>
+        {% for page in site.posts %}
+        <p>{{ page.url }}</p>
+        {% endfor %}
+    </div>
+</div>

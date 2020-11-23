@@ -6,6 +6,7 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/code.css" />
     <meta charset="UTF-8">
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="mobile-web-app-capable" content="yes">
@@ -42,21 +43,22 @@
         {{ content }}
     </div>
     <div id="footer">
+        <p id="footer-social-links-title"><strong>Social Links</strong></p>
         <div id="footer-social-row">
             {% for item in site.data.social-links %}
             <div class="footer-social-row-item">
                 <table class="footer-social-row-item-table" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td><a href="{{ item.url }}"><img class="footer-social-row-item-img"
-                                    src="/assets/images/{{ item.icon }}" width="48" height="48" /></a></td>
-                        <td>
-                            <a class="footer-social-row-item-link" href="{{ item.url }}">{{ item.name }}</a>
+                        <td><a href="{{ item.url }}" target="_blank">
+                                <span class="social-row-item-image"
+                                    data-image="/assets/images/{{ item.icon }}"></span></a>
                         </td>
                     </tr>
                 </table>
             </div>
             {% endfor %}
         </div>
+        <hr />
         <div id="footer-section-container">
             <div class="footer-section">
                 <img src="/assets/images/icon96.png" />
@@ -68,6 +70,8 @@
                     <li><a class="footer-section-link" href="/about">About</a></li>
                     <li><a class="footer-section-link" href="/faq">FAQ</a></li>
                     <li><a class="footer-section-link" href="/docs">Docs</a></li>
+                    <li><a class="footer-section-link" href="/docs/legal/privacy-policy">Privacy Policy</a></li>
+                    <li><a class="footer-section-link" href="/docs/legal/cookie-policy">Cookie Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -90,6 +94,7 @@
         </div>
         <hr />
         <p id="footer-copyright">&copy; 2020 Ryan Bester</p>
+        <p id="footer-note">Minecraft is a registered trademark of Mojang Synergies AB. PackStudio is not affiliated with Mojang AB or the Microsoft Corporation.</p>
     </div>
 </body>
 

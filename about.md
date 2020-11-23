@@ -1,5 +1,6 @@
 ---
 layout: default
+active: /about
 title: About | PackStudio
 ---
 
@@ -13,6 +14,6 @@ PackStudio is an open-source application for making Minecraft resource packs.
 
 ## About the Creator
 
-The creator of PackStudio is [Ryan Bester](https://github.com/ryanbester).
+PackStudio is developed by [Ryan Bester](https://github.com/ryanbester).
 
 </section>

@@ -1,0 +1,7 @@
+- name: Legal
+  url: legal
+  items:
+    - name: Privacy Policy
+      url: privacy-policy
+    - name: Cookie Policy
+      url: cookie-policy
