@@ -22,6 +22,7 @@ body {
     left: 0;
     right: 0;
     padding: 15px;
+    box-shadow: 3px 3px 19px 0px #666666;
 }
 
 #mobile-nav-header-table-left {
